@@ -1,0 +1,5 @@
+baseURL = "https://blog.2xup.net/"
+languageCode = "ja"
+title = "tchkmngy"
+theme= "hugo-theme-basic"
+

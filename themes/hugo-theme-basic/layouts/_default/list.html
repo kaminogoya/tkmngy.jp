@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+<body>
+  <head>
+    <h1><a href="{{ .Site.BaseURL  }}">{{ .Site.Title  }}</a></h1>
+  </head>
+  <main role="main">
+    <ul>
+    <!-- prettier-ignore -->
+    {{ range .Data.Pages.ByPublishDate }}
+      <li>
+        <a href="{{ .Permalink}}">{{ .Title }}</a>
+        <span class="f6 gray">{{ .Date.Format "January 2, 2006" }}</span>
+      </li>
+    <!-- prettier-ignore -->
+    {{ end }}
+    </ul>
+  </main>
+  {{ partial "footer.html" . }}
+</body>

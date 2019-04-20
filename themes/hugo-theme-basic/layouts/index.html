@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {{ partial "meta.html" . }}
+    <base href="{{ .Site.BaseURL }}">
+    <title>{{ .Site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}" />
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
+    {{ partial "head_includes.html" . }}
+  </head>
+  <body>
+    <header role="banner">
+      <h1>{{ .Site.Title }} {{ .Site.Params.TitleEmoji | emojify }}</h1>
+    </header>
+    <main role="main">
+    <ul>
+    <!-- prettier-ignore -->
+    {{ range .Data.Pages.ByPublishDate }}
+      <li>
+        <a href="{{ .Permalink}}">{{ .Title }}</a>
+        <span class="f6 gray">{{ .Date.Format "January 2, 2006" }}</span>
+      </li>
+    <!-- prettier-ignore -->
+    {{ end }}
+    </ul>
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>
+<!-- test -->
