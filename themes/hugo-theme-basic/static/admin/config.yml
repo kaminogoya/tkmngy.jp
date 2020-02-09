@@ -1,5 +1,5 @@
 backend:
-  name: gitlab
+  name: github
   repo: kaminogoya/blog.tkmngy.jp # GitHubのリポジトリ　「https://github.com/」の後ろの部分
   branch: master
 
