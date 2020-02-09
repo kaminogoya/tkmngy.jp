@@ -1,19 +1,20 @@
 {{ partial "header.html" . }}
-<body>
-  <head>
-    <h1><a href="{{ .Site.BaseURL  }}">{{ .Site.Title  }}</a></h1>
-  </head>
-  <main role="main">
-    <ul>
-    <!-- prettier-ignore -->
-    {{ range .Data.Pages.ByPublishDate }}
-      <li>
-        <a href="{{ .Permalink}}">{{ .Title }}</a>
-        <span class="f6 gray">{{ .Date.Format "January 2, 2006" }}</span>
-      </li>
-    <!-- prettier-ignore -->
-    {{ end }}
-    </ul>
-  </main>
-  {{ partial "footer.html" . }}
-</body>
+  <body>
+    <header>
+      <h1><a href="{{ .Site.BaseURL  }}">{{ .Site.Title  }}</a></h1>
+    </header>
+    <main role="main">
+      <ol>
+      <!-- prettier-ignore -->
+      {{ range .Data.Pages.ByPublishDate }}
+        <li>
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00"}}">{{ .Date.Format "January 2, 2006" }}</time>
+          <a href="{{ .Permalink}}">{{ .Title }}</a>
+        </li>
+      <!-- prettier-ignore -->
+      {{ end }}
+      </ol>
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>

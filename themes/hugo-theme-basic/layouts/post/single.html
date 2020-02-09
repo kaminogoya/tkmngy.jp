@@ -8,55 +8,15 @@
       <h2>{{ .Title }}</h2>
       <footer>
         <p>Posted in {{ .Date.Format "January 2, 2006" }}</p>
-      </footer>
-      {{ .Content }}
-    </article>
-
-      {{ if and (.Site.Taxonomies.series) (isset .Params "series") }}
-        <section class="mt4">
-          {{ $readMore := ":wave:" }}
-          {{ $series := .Params.series | urlize}}
-          <h3>{{ $readMore | emojify }} Related posts in the <a href="/series/{{ $series }}" class="b bb bw1 pb1 no-underline black">{{ .Params.Series }}</a> series...</h3>
-      
-          {{ $posts := index .Site.Taxonomies.series $series }}
-         
-          {{ if (gt ($posts | len) 1)}}
-            <ul class="list pl0">
-              {{ range where $posts "Title" "!=" .Title }}
-                <li class="list pl0 lh-copy">
-                  <a
-                    class="f4 b dib black no-underline"
-                    href="{{ .Permalink}}"
-                    >{{ .Title }}</a
-                  >
-                  <span class="f6 gray">{{ .Date.Format "January 2, 2006" }}</span>
-                </li>
-              {{ end }}
-            </ul>  
-          {{ else }}
-            <div class="ph2 i">
-              No follow up posts yet. Check back soon!
-            </div>    
-          {{ end }}
-        </section>
-      {{ end }}
-
-      <span class="f6 gray mt3" title="Lastmod: {{ .Lastmod.Format "January 2, 2006" }}. Published at: {{ .PublishDate.Format "2006-01-02" }}.">
+        <p title="Lastmod: {{ .Lastmod.Format "January 2, 2006" }}. Published at: {{ .PublishDate.Format "2006-01-02" }}.">
         {{ if ne .Lastmod .PublishDate }}
           Modified : {{ dateFormat "January 2, 2006" .Lastmod }}
         {{ end }}
-      </span>
+        </p>
+      </footer>
+      {{ .Content }}
+    </article>
   </main>
-      <script>
-      (function(d) {
-        var config = {
-          kitId: 'gjs0asr',
-          scriptTimeout: 3000,
-          async: true
-        },
-        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-      })(document);
-    </script>
-</body>
   {{ partial "footer.html" . }}
+</body>
 

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja" itemscope itemtype="http://schema.org/BlogPosting">
   <head>
     <meta charset="utf-8">
-    <title>{{ .Title }}</title>
+    <title>{{ .Title }} - {{ .Site.Title  }}</title>
 {{ partial "meta.html" . }}
     <base href="{{ .Site.BaseURL }}" />
 {{ partial "head_includes.html" . }}
