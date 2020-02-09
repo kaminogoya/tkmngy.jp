@@ -1,5 +1,5 @@
 baseURL = "https://blog.tkmngy.jp/"
 languageCode = "ja"
+hasCJKLanguage = true
 title = "上ノ郷谷太一"
 theme= "hugo-theme-basic"
-
