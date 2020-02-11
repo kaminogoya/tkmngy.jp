@@ -1,0 +1,25 @@
+// Color
+$bg-color: rgb(241, 246, 249);
+$fg-color: rgb(42, 39, 48);
+
+$light-gray: rgb(243, 243, 243); // #f3f3f3
+$gray: rgb(192, 198, 201); // #c0c6c9
+$dark-gray: rgb(123, 124, 125); // #7b7c7d
+
+// $link-color: rgb(236, 109, 113); // #ec6d71
+// $link-color: rgb(22, 74, 132);
+$link-color: rgb(84, 127, 128);
+$link-hover-color: $dark-gray;
+
+// Font
+$sans-serif: "proxima-nova", "Helvetica Neue", Helvetica,  sans-serif;
+$serif: "ten-mincho-text", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+$monospace: "source-code-pro", Consolas, Menlo, monospace !default;
+
+// Ratio
+$ratio: 1.732050807568877;
+
+// Margin
+$margin: em( $ratio );
+$default-margin: $margin 0;
+$default-line-height: $ratio;

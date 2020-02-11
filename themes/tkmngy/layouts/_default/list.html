@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ .Title }} - {{ .Site.Title  }}</title>
+{{ partial "meta.html" . }}
+{{ partial "head_includes.html" . }}
+  </head>
+  <body>
+    <header>
+      <h1><a href="{{ .Site.BaseURL  }}">{{ .Site.Title  }}</a></h1>
+    </header>
+    <main>
+      <ol>
+      <!-- prettier-ignore -->
+      {{ range .Data.Pages.ByPublishDate }}
+        <li>
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00"}}">{{ .Date.Format "January 2, 2006" }}</time>
+          <a href="{{ .Permalink}}">{{ .Title }}</a>
+        </li>
+      <!-- prettier-ignore -->
+      {{ end }}
+      </ol>
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>

@@ -1,0 +1,113 @@
+// @import 'normalize';
+
+$fg-color: black !default;
+$bg-color: white !default;
+$link-color: blue !default;
+
+$light-gray: light-gray !default;
+$gray: silver !default;
+$dark-gray: gray !default;
+
+$margin: 1em !default;
+$default-margin: 1em 0 !default;
+$default-line-height: 1.5 !default;
+
+$serif: Times, serif !default;
+$sans-serif: 'Helvetica Neue', Helvetica, sans-serif !default;
+$monospace: Consolas, Menlo, monospace !default;
+
+
+body {
+  line-height: $default-line-height;
+  font-family: $sans-serif;
+  color: $fg-color;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+}
+
+p {
+  @extend %default-margin;
+}
+
+ul,
+ol {
+  @extend %default-margin;
+  padding-left: $margin;
+
+  ul,
+  ol {
+    margin: 0;
+  }
+}
+
+dl {
+  @extend %default-margin;
+
+  dl {
+    margin: 0;
+  }
+}
+
+pre {
+  @extend %default-margin;
+  margin-left: 1em;
+  line-height: 1.4;
+  font-family: $monospace;
+}
+
+code, kbd, samp, var {
+  font-family: $monospace;
+}
+
+dfn {
+  font-style: normal;
+}
+
+abbr[title] {
+  cursor: help;
+  text-decoration: none;    
+}
+
+table {
+  @extend %default-margin;
+  width: 100%;
+  border-spacing: 0;
+  border-style: solid;
+  border-width: 1px 0 0 1px;
+  border-color: $fg-color;
+
+  th,
+  td {
+    padding: 0.5em;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: $fg-color;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+  }
+}
+
+hr {
+  margin: ($margin * 2) 0;
+}
+
+address {
+  font-style: normal;
+}
+
+figure {
+  @extend %default-margin;
+
+  img {
+    max-width: 100%;
+  }
+}

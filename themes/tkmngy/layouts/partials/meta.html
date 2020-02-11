@@ -1,0 +1,13 @@
+{{ with.Description }}
+    <meta content="{{ . }}" name="description">
+{{ end }}
+    <meta content="width=device-width" name="viewport">
+    <meta content="{{ .Description }}" property="og:description">
+    <meta content="" property="og:image">
+    <meta content="{{ .Title }}" property="og:title">
+    <meta content="article" property="og:type">
+    <meta content="{{ .Permalink }}" property="og:url">
+    <meta property="article:published_time" content="{{ .Date.Format "2006-01-02"}}">
+    <meta property="article:modified_time" content="{{ .Date.Format "2006-01-02"}}">
+    <meta content="summary" name="twitter:card">
+    <meta content="@{{ .Site.Params.twitter }}" name="twitter:site">

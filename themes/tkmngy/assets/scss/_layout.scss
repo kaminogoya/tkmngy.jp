@@ -1,0 +1,58 @@
+body {
+  max-width: $colspan12;
+  margin: 0 auto;
+  padding: 0;
+}
+
+header, 
+main,
+footer {
+  margin: 0 1em;
+
+  @media ( min-width: $colspan10 ) {
+    max-width: $colspan08;
+    margin: 0 auto;
+  }
+
+  @media ( min-width: $colspan12 ) {
+    width: $colspan08;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 $colspan01;
+  }
+}
+
+main {
+  > section {
+    margin-left: 0;
+
+    @media ( min-width: $colspan10 ) {
+      margin-left: $gap;
+
+      h2 {
+        margin-left: -$gap;
+      }
+    }
+  }
+}
+
+footer {
+  margin: ( $margin * 3 ) 0 $margin;
+  text-align: center;
+
+  @media ( min-width: $colspan12 ) {
+    clear: both;
+    text-align: left;
+  }
+}
+
+article {
+  > h1 {
+    margin-bottom: 0;
+  }
+
+  > footer {
+    margin: $gap 0 0;
+    padding: 0;  
+  }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ .Site.Title }}</title>
+    {{ partial "meta.html" . }}
+    <link href="{{ .Permalink }}" rel="canonical">
+    <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" type="application/rss+xml" rel="alternate">    
+    {{ partial "head_includes.html" . }}
+  </head>
+  <body>
+    <header>
+      <h1>{{ .Site.Title }}</h1>
+      <p><ruby>上ノ郷谷 太一<rp> (</rp><rt>かみのごうや たいち</rt><rp>)</rp></ruby>。デザイナー。<time datetime="1979-03-03">1979年3月3日</time>大阪府生れ。東京都在住。</p>
+      <p>事業会社でプロダクト開発、<abbr title="Coporate Identity">CI</abbr> / <abbr title="Visual Identity">VI</abbr> / <abbr title="Brand Identity">BI</abbr>、デザインチーム構築・マネジメント、経営メンバーとして組織の運営に携わってきました。</p>
+    </header>
+    <main>
+      <section id="resume">
+        <h2>経歴</h2>
+        <ol role="directory" class="resume_list">
+          <li>
+            <time datetime="2005-04-01">2005年4月</time>〜<time datetime="2012-12-31">2012年12月</time>
+            <a href="https://www.sixapart.jp">シックス・アパート株式会社</a>
+            <ul>
+              <li>コーポレートウェブサイト構築・運用</li>
+              <li>TypePad のモバイル対応</li>
+              <li>Movable Type&#xA0;3,&#xA0;4 の日本語ローカライゼーション</li>
+              <li>Movable Type&#xA0;5 のプロダクトマネージメント、デザイン、フロントエンド実装、<abbr title="Visual Identity">VI</abbr></li>
+            </ul>
+          </li>
+          <li>
+            <time datetime="2013-01-01">2013年1月</time>〜<time datetime="2013-05-31">2013年5月</time>
+            <a href="https://about.peatix.com/aboutus.html?hl=ja&amp;force=jp">Orinoco Peatix 株式会社</a>
+            <ul>
+              <li>クレジットカード決済 <abbr title="User Interface">UI</abbr> のデザイン、フロントエンド実装</li>
+            </ul>
+          </li>
+          <li>
+            <time datetime="2013-06-01">2013年6月</time>〜<time datetime="2015-02-28">2015年2月</time>
+            <a href="https://info.cookpad.com">クックパッド株式会社</a>
+            <ul>
+              <li>国際版クックパッドの立ち上げ、サービスサイトやアプリのデザイン、フロントエンド実装</li>
+              <li>コーポレートロゴのリニューアルデザイン、<abbr title="Visual Identity">VI</abbr></li>
+            </ul>
+          </li>
+          <li>
+            <time datetime="2015-03-01">2015年3月</time>〜<time datetime="2019-02-28">2019年2月</time>
+            <a href="https://corp.toreta.in">株式会社トレタ</a>
+            <ul>
+              <li><dfn><abbr title="Chief Creative Officer">CCO</abbr></dfn> (最高クリエイティブ責任者)</li>
+              <li><dfn><abbr title="Chief Design Officer">CDO</abbr></dfn> (最高デザイン責任者) <time datetime="2015-03-01">2016年7月</time>〜</li>
+              <li>経営、組織全体へのデザインの啓蒙</li>
+              <li>予約/顧客台帳アプリ Toreta のブロダクトオーナー、デザイン、<abbr title="Brand Identity">BI</abbr></li>
+              <li>経営者、プロダクトオーナーのアイデアの具現化</li>
+              <li>製品開発部門の構築・運用、マネジメント</li>
+              <li>デザイン部門の構築・運用、マネジメント</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+      <section id="media_exposure">
+        <h2>露出</h2>
+        <section>
+          <h3>メディア</h3>
+          <ul>
+            <li><a href="https://techlife.cookpad.com/entry/2014/09/05/114440">クックパッドの新しいロゴに込めた思い</a></li>
+            <li><a href="https://careerhack.en-japan.com/report/detail/629">「デザイナーがプロダクトマネージャーになるのは必然」トレタCCO 上ノ郷谷太一</a></li>
+            <li><a href="https://www.nikkei.com/article/DGXMZO28945310T00C18A4000000/">CDO、変革3つの道　デジタル・デザイン・多様性</a></li>
+            <li><a href="https://seleck.cc/692">デザインは「課題解決の設計」トレタのデザインプロセスに学ぶ、デザイナーの役割とは</a></li>            
+          </ul>
+        </section>
+        <section>
+          <h3>イベント登壇</h3>
+          <ul>
+            <li><a href="https://goodpatch.com/blog/cdonight-01-senior/">スタートアップにCDOが必要な理由 CDO Night&#xA0;#1 レポート【パネルディスカッションシニア編】</a></li>
+            <li><a href="https://techplay.jp/event/605849">Reframe for design&#xA0;#1 -経営とデザインの行間-</a></li>
+            <li><a href="https://connec-tive.com/blog/dih-vol1/">DESIGN IN-HOUSE&#xA0;#1 〜インハウスのチームビルディング〜</a></li>
+            <li><a href="https://techplay.jp/event/729447">「はじめてのUIデザイン」発売記念イベント 〜コンパスを携えたその先へ〜</a></li>
+          </ul>
+        </section>
+      </section>
+      <section id="books">
+        <h2>著書</h2>
+        <section>
+          <h3>共著</h3>
+          <ul>
+            <li><a href="https://www.amazon.co.jp/dp/4798107042/">はてなの本</a> (<time datetime="2004-09-09">2004年9月9日</time>)</li>
+            <li><a href="https://www.amazon.co.jp/dp/4798112194/">ちゃんと CSS するためのスタイルガイド入門</a> (<time datetime="2006-12-13">2006年12月13日</time>)</li>
+            <li><a href="https://www.amazon.co.jp/dp/4839927537/">Movable Type プロフェッショナル・スタイル MT4.1対応</a> (<time datetime="2018-04-08">2008年4月8日</time>)</li>
+            <li><a href="https://peaks.cc/tchkmngy/ui_design">はじめての UI デザイン</a> (<time datetime="2019-03-15">2019年3月15日</time>)</li>
+          </ul>
+        </section>
+        <section>
+          <h3>監修</h3>
+          <ul>
+            <li><a href="https://www.amazon.co.jp/dp/4774137251/">これからはじめる Movable Type の本</a> (<time datetime="2009-01-10">2009年1月10日</time>)</li>
+          </ul>
+        </section>
+      </section>
+      <section id="photograph">
+        <h2>その他活動</h2>
+        <section>
+          <h3>写真作家としての活動</h3>
+          <ul>
+            <li><a href="http://www.omotesando-garo.com/link.12/kaminogouya.html">上ノ郷谷 太一 写真展 「Puls」</a> - 表参道画廊</li>
+            <li><a href="http://www.nationalphoto.co.jp/exhibition/">ナショナル・フォート創立44周年記念・コダックネガカラーポートラ160発売記念「新鋭写真家44人による写真展」</a> - 銀座コダックフォトギャラリー</li>
+          </ul>
+        </section>
+      </section>
+      <section id="awards">
+        <h2>受賞歴</h2>
+        <section>
+          <h3>グッドデザイン賞</h3>
+          <ul>
+            <li><a href="https://www.g-mark.org/award/describe/33887?amp;token=3XZiHRFWdv&amp;locale=ja">新聞ブログ [読みやすい、使いやすい、広がりやすい、情報発信メディア]</a> (<time datetime="2007-10-01">2007年</time>)</li>
+          </ul>
+        </section>
+      </section>
+      <section id="contactinfo">
+        <h2>連絡先・アカウント</h2>
+        <p>直接のご連絡は Facebook Messenger や Twitter のダイレクトメッセージ、または<a href="mailto:&#107;&#97;&#109;&#105;&#110;&#111;&#103;&#111;&#121;&#97;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">電子メール</a>でお願い致します。</p>
+        <ul>
+          <li><a href="https://www.instagram.com/tchkmngy/">Instagram</a></li>
+          <li><a href="https://twitter.com/tchkmngy">Twitter</a></li>
+          <li><a href="https://www.facebook.com/tchkmngy">Facebook</a></li>
+          <li><a href="https://dribbble.com/tchkmngy">Dribbble</a></li>
+          <li><a href="https://github.com/kaminogoya">GitHub</a></li>
+        </ul>
+      </section>
+      <ol>
+      <!-- prettier-ignore -->
+      {{ range .Data.Pages.ByPublishDate }}
+        <li>
+          <a href="{{ .Permalink}}">{{ .Title }}</a>
+          <span>{{ .Date.Format "January 2, 2006" }}</span>
+        </li>
+      <!-- prettier-ignore -->
+      {{ end }}
+      </ol>
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>

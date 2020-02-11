@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja" itemscope itemtype="http://schema.org/BlogPosting">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ .Title }} - {{ .Site.Title  }}</title>
+{{ partial "meta.html" . }}
+{{ partial "head_includes.html" . }}
+  </head>
+  <body>
+    <header>
+      <h1><a href="{{ .Site.BaseURL  }}">{{ .Site.Title }}</a></h1>
+    </header>
+    <main>
+      <article>
+        <h1>{{ .Title }}</h1>
+        <footer>
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00"}}" itemprop="datePublished">{{ .Date.Format "2006年1月2日" }}</time>
+        </footer>
+        <div itemprop="articleBody">
+          {{ .Content }}
+        </div>
+      </article>
+    </main>
+{{ partial "footer.html" . }}    
+  </body>
+</html>

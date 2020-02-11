@@ -1,0 +1,144 @@
+// Clearfix
+@mixin clearfix {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    display: block;
+    height: 0;
+    visibility: hidden;
+    content: "\0020";
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Border Radius
+@mixin border-radius( $params ) {
+  @each $vendor in null {
+    #{ $vendor }border-radius: $params;
+  }
+}
+
+// Box Shadow
+@mixin box-shadow( $params ) {
+  @each $vendor in null {
+    #{ $vendor }box-shadow: $params;
+  }
+}
+
+// Text Shadow
+@mixin text-shadow( $params ) {
+  @each $vendor in null {
+    #{ $vendor }text-shadow: $params;
+  }
+}
+
+// Box Sizing
+@mixin box-sizing( $model ) {
+  @each $vendor in -moz-, -webkit-, null {
+    #{ $vendor }box-sizing: $model;
+  }
+}
+
+// Opacity
+@mixin opacity( $degree ) {
+  $degree_num: ( $degree * 100 );
+  opacity: $degree;
+  -ms-filter: 'alpha( opacity = #{$degree_num} )';
+  filter: alpha( opacity = $degree_num );
+}
+
+// Transform
+@mixin transform( $functions ) {
+  @each $vendor in -ms-, -webkit-, null {
+    #{ $vendor }transform: $functions;
+  }
+}
+
+// Gradient
+/// Vertical
+@mixin vertical-gradient( $start, $end ) {
+  background-color: $end;
+  @each $vendor in -ms-, -moz-, -webkit-, null {
+    background-image: #{ $vendor }linear-gradient( left, $start, $end );
+  }
+}
+
+/// Horizontal
+@mixin horizontal-gradient( $start, $end ) {
+  background-color: $end;
+  @each $vendor in -ms-, -moz-, -webkit-, null {
+    background-image: #{ $vendor }linear-gradient( $start, $end );
+  }
+}
+
+// Triangle
+@mixin eq-triangle( $length, $color, $direction ) {
+  $SQRT3: $ratio;
+  $half-length: ( $length / 2 );
+  $side: ( $half-length * $SQRT3 );
+
+  width: $length;
+  height: $length;
+  font-size: 100%;
+  @extend %border-box;
+
+  @if $direction == right {
+    border-top: $half-length solid transparent;
+    border-bottom: $half-length solid transparent;
+    border-left: $side solid $color;
+  }
+
+  @else if $direction == bottom {
+    border-top: $side solid $color;
+    border-right: $half-length solid transparent;
+    border-left: $half-length solid transparent;
+  }
+
+  @else if $direction == left {
+    border-top: $half-length solid transparent;
+    border-right: $side solid $color;
+    border-bottom: $half-length solid transparent;
+  }
+
+  @else {
+    border-right: $half-length solid transparent; 
+    border-bottom: $side solid $color;
+    border-left: $half-length solid transparent; 
+  }
+}
+
+@mixin replacement {
+  display: block;
+  content: "\0020";
+}
+
+// Extend
+%default-margin {
+  margin: $default-margin;
+}
+
+%border-box {
+  @include box-sizing( border-box );
+}
+
+%tap-not-highlight {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+%ellipsis-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+%clearfix {
+  @include clearfix;
+}
+
+%replacement {
+  @include replacement;
+}

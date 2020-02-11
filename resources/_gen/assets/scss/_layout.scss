@@ -1,0 +1,47 @@
+body {
+  max-width: $colspan12;
+  margin: 0 auto;
+  padding: 0;
+}
+
+header, 
+main {
+  margin: 0 1em;
+
+  @media ( min-width: $colspan10 ) {
+    max-width: $colspan09;
+    margin: 0 auto;
+  }
+
+  @media ( min-width: $colspan12 ) {
+    width: $colspan09;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 $gap;
+  }
+}
+
+main {
+  > section {
+    margin-left: 0;
+
+    @media ( min-width: $colspan10 ) {
+      margin-left: $gap;
+
+      h2 {
+        margin-left: -$gap;
+      }
+    }
+  }
+}
+
+footer {
+  margin: ( $margin * 3 ) 1em $margin;
+  text-align: center;
+
+  @media ( min-width: $colspan12 ) {
+    clear: both;
+    text-align: left;
+  }
+}
+
