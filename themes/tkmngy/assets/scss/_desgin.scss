@@ -8,7 +8,7 @@ html {
   background-repeat: no-repeat;
   background-position: center bottom ( $margin * 3 );
   
-  @media ( min-width: $colspan10 ) {
+  @media ( min-width: $colspan12 ) {
     padding-bottom: 0;
     background-size: $colspan02 auto;
     background-position: right ( $margin * 2 ) bottom ( $margin * 2 );
@@ -111,6 +111,13 @@ section {
   @include border-radius(50%);
 }
 
+article {
+  footer {
+    color: $dark-gray;
+    font-size: 90%;
+  }
+}
+
 hr {
   margin-right: auto;
   margin-left: auto;
@@ -124,7 +131,7 @@ address {
   left: 0;
   width: 100%;
 
-  @media ( min-width: $colspan10 ) {
+  @media ( min-width: $colspan12 ) {
     position: static;
   }
 }

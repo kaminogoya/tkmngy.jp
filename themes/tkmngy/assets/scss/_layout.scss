@@ -41,7 +41,6 @@ footer {
   text-align: center;
 
   @media ( min-width: $colspan12 ) {
-    clear: both;
     text-align: left;
   }
 }
@@ -53,6 +52,7 @@ article {
 
   > footer {
     margin: $gap 0 0;
-    padding: 0;  
+    padding: 0;
+    text-align: left;
   }
 }

@@ -4,9 +4,9 @@
 name = "Tkmngy"
 license = "MIT"
 licenselink = "https://github.com/kaminogoya/tkmngy/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
-tags = []
+description = "Hugo theme for my website."
+homepage = "https://tkmngy.jp/"
+tags = [simple]
 features = []
 min_version = "0.41"
 
