@@ -23,4 +23,5 @@ fields:
   config:
     required: true
 pages:
+- content/posts/mummies-of-the-world.md
 - content/posts/otoko-wa-tsurai-yo.md
