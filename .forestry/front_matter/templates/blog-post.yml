@@ -10,8 +10,8 @@ fields:
   label: date
   config:
     date_format: YYYY-MM-DD
-    export_format: YYYY-MM-DDThh:mm:ssZ
-    time_format: hh:mm:ssZ
+    export_format: YYYY-MM-DDTh:mm:ss+09:00
+    time_format: ''
 - type: text
   name: description
   label: description
