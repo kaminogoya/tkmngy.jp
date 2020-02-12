@@ -8,9 +8,15 @@ fields:
 - type: datetime
   name: date
   label: date
+  config:
+    date_format: YYYY-MM-DD
 - type: text
   name: description
   label: description
+  config:
+    required: true
 - type: text
   name: slug
   label: slug
+  config:
+    required: true
