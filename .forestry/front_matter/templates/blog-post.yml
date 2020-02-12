@@ -22,3 +22,5 @@ fields:
   label: slug
   config:
     required: true
+pages:
+- content/posts/otoko-wa-tsurai-yo.md
