@@ -22,3 +22,5 @@ fields:
   label: slug
   config:
     required: true
+pages:
+- content/posts/男はつらいよ-お帰り-寅さん.md
