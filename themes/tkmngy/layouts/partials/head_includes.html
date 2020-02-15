@@ -1,6 +1,0 @@
-    <link href="/favicon.ico" type="image/x-icon" rel="shortcut icon">
-    <link href="/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" type="application/rss+xml" rel="alternate">
-    <link href="{{ .Permalink }}" rel="canonical">
-{{ $style := resources.Get "scss/styles.scss" | toCSS | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">

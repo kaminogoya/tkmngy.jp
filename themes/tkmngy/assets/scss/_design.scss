@@ -3,16 +3,22 @@
 html {
   position: relative;
   padding-bottom: $colspan02;
-  background: $bg-color url(https://res.cloudinary.com/tchkmngy/image/upload/v1550270124/2xup.png);
+  background: $bg-color url(/img/tkmngy.png);
   background-size: ( $colspan01 + $gap ) auto;
   background-repeat: no-repeat;
   background-position: center bottom ( $margin * 3 );
+  visibility: hidden;
   
   @media ( min-width: $colspan12 ) {
     padding-bottom: 0;
     background-size: $colspan02 auto;
     background-position: right ( $margin * 2 ) bottom ( $margin * 2 );
   }
+}
+
+html.wf-active,
+html.loading-delay {
+  visibility: visible;
 }
 
 body {

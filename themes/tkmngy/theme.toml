@@ -13,9 +13,3 @@ min_version = "0.41"
 [author]
   name = "Taichi Kaminogoya"
   homepage = "https://tkmngy.jp"
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""

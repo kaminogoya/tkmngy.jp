@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja" itemscope itemtype="http://schema.org/WebPage">
   <head>
-    <meta charset="utf-8">
-    <title>{{ .Site.Title }}</title>
-    {{ partial "meta.html" . }}
-    <link href="{{ .Permalink }}" rel="canonical">
-    <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" type="application/rss+xml" rel="alternate">    
-    {{ partial "head_includes.html" . }}
+{{ partial "meta" . }}
+{{ partial "head" . }}
   </head>
   <body>
     <header>
@@ -129,6 +125,6 @@
         </ul>
       </section>
     </main>
-    {{ partial "footer.html" . }}
+{{ partial "footer.html" . }}
   </body>
 </html>
