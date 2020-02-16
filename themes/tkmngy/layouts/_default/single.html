@@ -12,13 +12,13 @@
       <article>
         <h1>{{ .Title }}</h1>
         <footer>
-          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00"}}" itemprop="datePublished">{{ .Date.Format "2006年1月2日" }}</time>
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05+09:00"}}" itemprop="datePublished">{{ .Date.Format "2006年1月2日" }}</time>
         </footer>
         <div itemprop="articleBody">
           {{ .Content }}
         </div>
       </article>
     </main>
-{{ partial "footer.html" . }}    
+{{ partial "footer" . }}    
   </body>
 </html>

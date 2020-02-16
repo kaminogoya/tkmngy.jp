@@ -7,18 +7,12 @@ html {
   background-size: ( $colspan01 + $gap ) auto;
   background-repeat: no-repeat;
   background-position: center bottom ( $margin * 3 );
-  visibility: hidden;
   
   @media ( min-width: $colspan12 ) {
     padding-bottom: 0;
     background-size: $colspan02 auto;
     background-position: right ( $margin * 2 ) bottom ( $margin * 2 );
   }
-}
-
-html.wf-active,
-html.loading-delay {
-  visibility: visible;
 }
 
 body {
@@ -45,9 +39,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: ( $margin * 2 );
+  margin-block-start: ( $margin * 2 );
   line-height: 1.25;
-  font-weight: bold;
 
   a {
     color: $fg-color;
@@ -67,9 +60,10 @@ header {
 
   h1 {
     margin: $margin 0;
-    font-family: a-otf-futo-min-a101-pr6n, serif;
-    font-size: 150%;
-    font-weight: bold;
+    font-family: toppan-bunkyu-mincho-pr6n, serif;
+    font-size: 160%;
+    letter-spacing: 0.16em;
+    
 
     a {
         text-decoration: none;
@@ -84,20 +78,15 @@ header {
 section {
 
   h2 {
-    font-size: 120%;
-    font-weight: normal;
-
-    + section h3 {
-      margin-top: $margin; 
-    }
+    font-size: 140%;
   }
 
   h3 {
-    font-size: 100%;
+    font-size: 110%;
   }
 }
 
-.resume_list {
+.posts {
   padding-left: 0;
 
   > li {
@@ -105,8 +94,6 @@ section {
   }
 
   ul {
-    margin-bottom: $margin;
-
     li {
       list-style-type: disc;
     }
@@ -131,6 +118,15 @@ hr {
   @include eq-triangle( 1em, $dark-gray, bottom );
 }
 
+ul, ol, p {
+    margin-top: $margin;
+}
+
+li {
+  margin-bottom: ($margin / 3);
+}
+
+
 address {
   position: absolute;
   bottom: $margin;
@@ -139,5 +135,18 @@ address {
 
   @media ( min-width: $colspan12 ) {
     position: static;
+  }
+
+  a {
+    color: $fg-color;
+
+    &:visited {
+        color: $fg-color;
+    }
+
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: none;
+    }
   }
 }

@@ -1,12 +1,12 @@
 baseURL = "https://blog.tkmngy.jp/"
 languageCode = "ja"
 hasCJKLanguage = true
-title = "tkmngy.jp"
+title = "上ノ郷谷太一"
 theme = "tkmngy"
 
 [params]
-  Description = "デザイナー 上ノ郷谷太一 (かみのごうやたいち) のウェブサイト"
-  Twitter = "tchkmngy"
-  Author = "上ノ郷谷 太一"
-  AuthorURL = "https://tkmngy.jp/"
-  CoverImage = "/apple-touch-icon-precomposed.png"
+  description = "デザイナー 上ノ郷谷太一 (かみのごうやたいち) のウェブサイト"
+  twitter = "tchkmngy"
+  author = "上ノ郷谷 太一"
+  authorurl = "https://tkmngy.jp/"
+  coverimage = "/apple-touch-icon-precomposed.png"
