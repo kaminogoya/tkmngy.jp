@@ -39,7 +39,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-block-start: ( $margin * 2 );
+  margin-top: ( $margin * 2 );
   line-height: 1.25;
 
   a {
@@ -79,6 +79,10 @@ section {
 
   h2 {
     font-size: 140%;
+
+    & + section h3 {
+      margin-top: $margin;
+    }
   }
 
   h3 {
