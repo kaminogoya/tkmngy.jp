@@ -17,7 +17,8 @@ $serif: "ten-mincho-text", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo
 $monospace: "source-code-pro", Consolas, Menlo, monospace !default;
 
 // Ratio
-$ratio: 1.732050807568877;
+// $ratio: 1.732050807568877;
+$ratio: 1.616;
 
 // Margin
 $margin: em( $ratio );

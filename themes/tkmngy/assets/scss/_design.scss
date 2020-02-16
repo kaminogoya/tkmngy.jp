@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  line-height: $ratio;
+  line-height: 1.616;
   font-family: $serif;
 
   @media ( min-width: $colspan10 ) {
@@ -79,14 +79,15 @@ section {
 
   h2 {
     font-size: 140%;
-
-    & + section h3 {
-      margin-top: $margin;
-    }
   }
 
   h3 {
-    font-size: 110%;
+    margin-top: $margin;
+    font-size: 110%;  
+  }
+
+  section {
+    margin-bottom: ( $margin * $ratio );
   }
 }
 
