@@ -22,6 +22,15 @@ fields:
   label: slug
   config:
     required: true
+- name: lastmod
+  type: datetime
+  label: last modified date
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
 pages:
 - content/posts/mummies-of-the-world.md
 - content/posts/otoko-wa-tsurai-yo.md
