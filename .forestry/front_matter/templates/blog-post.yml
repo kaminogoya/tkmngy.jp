@@ -32,6 +32,7 @@ fields:
   config:
     required: true
 pages:
+- content/posts/20200107.md
 - content/posts/mummies-of-the-world.md
 - content/posts/otoko-wa-tsurai-yo.md
 - content/posts/ui_design_book.md
