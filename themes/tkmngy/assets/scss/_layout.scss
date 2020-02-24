@@ -41,10 +41,6 @@ main > section {
       margin-left: -$gap;
     }
   }
-
-  h2 + section h3 {
-    margin-top: ( $margin / $ratio );
-  }
 }
 
 .posts {
