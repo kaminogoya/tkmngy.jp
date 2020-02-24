@@ -1,26 +1,11 @@
-// @import 'normalize';
-
-$fg-color: black !default;
-$bg-color: white !default;
-$link-color: blue !default;
-
-$light-gray: light-gray !default;
-$gray: silver !default;
-$dark-gray: gray !default;
-
-$margin: 1em !default;
-$default-margin: 1em 0 0 !default;
-$default-line-height: 1.5 !default;
-
-$serif: Times, serif !default;
-$sans-serif: 'Helvetica Neue', Helvetica, sans-serif !default;
-$monospace: Consolas, Menlo, monospace !default;
-
+html {
+  background-color: white;
+  color: black;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
 
 body {
-  line-height: $default-line-height;
-  font-family: $sans-serif;
-  color: $fg-color;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -30,42 +15,46 @@ h3,
 h4,
 h5,
 h6 {
-  text-rendering: optimizeLegibility;
+  margin-top: 3rem;
   margin-bottom: 0;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: rgb(0, 0, 238);
+}
+
+a:visited {
+  color: rgb(85, 26, 139);
 }
 
 p {
-  @extend %default-margin;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 ul,
 ol {
-  @extend %default-margin;
-  padding-left: $margin;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  padding-left: 1.5rem;
 
   ul,
   ol {
-//    margin: 0;
-  }
-}
-
-dl {
-  @extend %default-margin;
-
-  dl {
-    margin: 0;
+    margin-top: 0;
   }
 }
 
 pre {
-  @extend %default-margin;
-  margin-left: 1em;
-  line-height: 1.4;
-  font-family: $monospace;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  line-height: 1.25;
+  font-family: monospace;
 }
 
 code, kbd, samp, var {
-  font-family: $monospace;
+  font-family: monospace;
 }
 
 dfn {
@@ -83,14 +72,14 @@ table {
   border-spacing: 0;
   border-style: solid;
   border-width: 1px 0 0 1px;
-  border-color: $fg-color;
+  border-color: gray;
 
   th,
   td {
     padding: 0.5em;
     border-style: solid;
     border-width: 0 1px 1px 0;
-    border-color: $fg-color;
+    border-color: gray;
     text-align: left;
     vertical-align: top;
     word-wrap: break-word;
@@ -98,19 +87,29 @@ table {
 }
 
 hr {
-  margin: ($margin * 2) 0;
+  margin: 3rem 0;
 }
 
 address {
   font-style: normal;
 }
 
+img {
+  box-sizing: border-box;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  border-width: 0;
+}
+
 figure {
-  @extend %default-margin;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 
   img {
     height: auto;
     max-width: 100%;
     max-height: 100%;
+    vartical-align: bottom;
   }
 }

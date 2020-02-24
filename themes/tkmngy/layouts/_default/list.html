@@ -15,8 +15,8 @@
         <ol class="posts">
           {{ range .Pages }}
           <li>
-            <time datetime="{{ .Date.Format "2006-01-02T15:04:05+09:00"}}">{{ .Date.Format "1月2日" }}</time>
             <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05+09:00"}}">{{ .Date.Format "1月2日" }}</time>
           </li>
           {{ end }}
         </ol>

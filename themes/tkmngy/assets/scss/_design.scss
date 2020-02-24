@@ -1,35 +1,25 @@
-@charset "UTF-8";
-
 html {
   position: relative;
   padding-bottom: $colspan02;
-  background: $bg-color url(/img/tkmngy.png);
+  background-image: var( --image-logo );
   background-size: ( $colspan01 + $gap ) auto;
   background-repeat: no-repeat;
   background-position: center bottom ( $margin * 3 );
+  font-family: $serif;
   
-  @media ( min-width: $colspan12 ) {
+  @media ( min-width: 72em ) {
     padding-bottom: 0;
     background-size: $colspan02 auto;
     background-position: right ( $margin * 2 ) bottom ( $margin * 2 );
   }
 }
 
-body {
-  line-height: 1.616;
-  font-family: $serif;
-
-  @media ( min-width: $colspan10 ) {
-    font-size: 18px;
-  }
-}
-
 a {
-  color: $link-color;
+  color: var( --color-spot-primary );
   text-decoration: underline;
 
   &:visited {
-    color: $link-hover-color;
+    color: var( --color-foreground-secondary );
   }
 }
 
@@ -39,80 +29,52 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: ( $margin * 2 );
-  line-height: 1.25;
 
   a {
-    color: $fg-color;
+    color: var( --color-foreground-primary );
 
     &:visited {
-        color: $fg-color;
+        color: var( --color-foreground-primary );
     }
 
     &:hover {
-      color: $link-hover-color;
+      color: var( --color-foreground-secondary );
       text-decoration: none;
     }
   }
 }
 
 header {
-
   h1 {
-    margin: $margin 0;
+    position: relative;
     font-family: toppan-bunkyu-mincho-pr6n, serif;
-    font-size: 160%;
+    font-size: $font-size-root-largest;
     letter-spacing: 0.16em;
     
-
     a {
         text-decoration: none;
     }
 
-    @media ( min-width: $colspan12 ) {
-      margin: ( $margin * 2 ) 0;
+    &:after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: block;
+      content: "tkmngy.jp";
+      letter-spacing: 0;
+      font-size: $small-font-size;
+      font-weight: 0;
     }
   }
-}
-
-section {
-
-  h2 {
-    font-size: 140%;
-  }
-
-  h3 {
-    margin-top: $margin;
-    font-size: 110%;  
-  }
-
-  section {
-    margin-bottom: ( $margin * $ratio );
-  }
-}
-
-.posts {
-  padding-left: 0;
-
-  > li {
-    list-style: none;
-  }
-
-  ul {
-    li {
-      list-style-type: disc;
-    }
-  }
-}
-
-.avatar {
-  @include border-radius(50%);
 }
 
 article {
   footer {
-    color: $dark-gray;
-    font-size: 90%;
+    color: var( --color-foreground-secondary );
+  }
+
+  > div {
+    text-align: justify;
   }
 }
 
@@ -120,17 +82,13 @@ hr {
   margin-right: auto;
   margin-left: auto;
   border: 0;
-  @include eq-triangle( 1em, $dark-gray, bottom );
-}
-
-ul, ol, p, figure {
-    margin-top: $margin;
+  @include eq-triangle( 1em, $pallet-gray-twilight, bottom );
 }
 
 li {
   margin-bottom: ($margin / 3);
+  line-height: 1.5;
 }
-
 
 address {
   position: absolute;
@@ -138,19 +96,19 @@ address {
   left: 0;
   width: 100%;
 
-  @media ( min-width: $colspan12 ) {
+  @media ( min-width: 72em ) {
     position: static;
   }
 
   a {
-    color: $fg-color;
+    color: var( --color-foreground-primary );
 
     &:visited {
-        color: $fg-color;
+        color: var( --color-foreground-primary );
     }
 
     &:hover {
-      color: $link-hover-color;
+      color: var( --color-foreground-secondary );
       text-decoration: none;
     }
   }

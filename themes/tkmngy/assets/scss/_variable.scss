@@ -1,25 +1,78 @@
-// Color
-$bg-color: rgb(241, 246, 249);
-$fg-color: rgb(42, 39, 48);
+// Base
+$base-primary: 1;
+$base-secondary: 1.4;
 
-$light-gray: rgb(243, 243, 243); // #f3f3f3
-$gray: rgb(192, 198, 201); // #c0c6c9
-$dark-gray: rgb(123, 124, 125); // #7b7c7d
+// Pallet
+$pallet-white: hsl(200, 40, 96);
+$pallet-gray-sunlight: hsl(200, 32, 88);
+$pallet-gray-twilight: hsl(200, 8, 64);
+$pallet-gray-midnight: hsl(200, 8, 24);
+$pallet-black-abyss: hsl(200, 24, 16);
+$pallet-black-hadal: hsl(200, 24, 8);
+$pallet-blue: hsl(192, 56, 40);
+$pallet-lightblue: hsl(192, 56, 72);
 
-// $link-color: rgb(236, 109, 113); // #ec6d71
-// $link-color: rgb(22, 74, 132);
-$link-color: rgb(84, 127, 128);
-$link-hover-color: $dark-gray;
+// Ratio
+$ratio: 1.73;
 
 // Font
 $sans-serif: "proxima-nova", "Helvetica Neue", Helvetica,  sans-serif;
 $serif: "ten-mincho-text", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
 $monospace: "source-code-pro", Consolas, Menlo, monospace !default;
 
-// Ratio
-// $ratio: 1.732050807568877;
-$ratio: 1.616;
+// Font Size
+$default-font-size: ( $base-primary * 1rem );
+$large-font-size: ( $base-secondary * 1rem );
+$largest-font-size: ( $default-font-size * $ratio );
+$small-font-size: ( $large-font-size / $ratio );
+
+$font-size-root-default: ( $base-primary * 100% );
+$font-size-root-large: ( ( $base-primary + $base-secondary ) / 2 * 100% );
+$font-size-root-largest: ( $base-secondary * 100% );
 
 // Margin
-$margin: em( $ratio );
-// $default-margin: $margin 0;
+$margin: ( $ratio * 1rem );
+$default-margin: $margin 0 0;
+
+// CSS Variables
+:root {
+  --color-background-primary: #{$pallet-white};
+  --color-background-secondary: #{$pallet-gray-sunlight};
+  --color-foreground-primary: #{$pallet-black-hadal};
+  --color-foreground-secondary: #{$pallet-black-abyss};
+  --color-spot-primary: #{$pallet-blue};
+
+  --image-logo: url("/img/tkmngy.png");
+ 
+  --base-font-size: #{$font-size-root-default};
+  --base-line-height: #{$ratio};
+
+  line-height: var( --base-line-height );
+  font-size: var( --base-font-size );
+  background-color: var( --color-background-primary );
+  color: var( --color-foreground-primary );
+}
+
+@media ( prefers-color-scheme: dark ) {
+  :root {
+    --color-background-primary: #{$pallet-black-abyss};
+    --color-background-secondary: #{$pallet-gray-midnight};
+    --color-foreground-primary: #{$pallet-white};
+    --color-foreground-secondary: #{$pallet-gray-sunlight};
+    --color-spot-primary: #{$pallet-lightblue};
+
+    --image-logo: url("/img/tkmngy_white.png");
+  }
+}
+
+@media ( min-width: 48em ) {
+  :root {
+    --base-font-size: #{$font-size-root-large};
+  }
+}
+
+@media ( min-width: 72em ) {
+  :root {
+    --base-font-size: #{$font-size-root-largest};
+  }
+}

@@ -1,6 +1,6 @@
 $cols: 12;
-$col: em( $ratio * 2 );
-$gut: em( $ratio );
+$col: ( $ratio * 2rem );
+$gut: ( $ratio * 1rem);
 $gap: ( $gut / 2 );
 
 $colspan: ();

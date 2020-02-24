@@ -1,6 +1,6 @@
-// number to em
-@function em( $num ) {
-  $num: ( $num * 1em );
+// number to rem
+@function rem( $num ) {
+  $num: ( $num * 1rem );
 
   @return $num;
 }
