@@ -4,13 +4,13 @@ $base-secondary: 1.4;
 
 // Pallet
 $pallet-white: hsl(200, 40, 96);
-$pallet-gray-sunlight: hsl(200, 32, 88);
+$pallet-gray-sunlight: hsl(200, 40, 84);
 $pallet-gray-twilight: hsl(200, 8, 64);
 $pallet-gray-midnight: hsl(200, 8, 24);
 $pallet-black-abyss: hsl(200, 24, 16);
 $pallet-black-hadal: hsl(200, 24, 8);
-$pallet-blue: hsl(192, 56, 40);
-$pallet-lightblue: hsl(192, 56, 72);
+$pallet-blue: hsl(200, 56, 40);
+$pallet-lightblue: hsl(200, 56, 72);
 
 // Ratio
 $ratio: 1.73;
@@ -31,8 +31,12 @@ $font-size-root-large: ( ( $base-primary + $base-secondary ) / 2 * 100% );
 $font-size-root-largest: ( $base-secondary * 100% );
 
 // Margin
-$margin: ( $ratio * 1rem );
-$default-margin: $margin 0 0;
+$space-default: ( $base-primary * $ratio * 1rem);
+$space-small: ( $space-default / $ratio );
+$space-tiny: ( $space-small / $ratio );
+$space-large: ( $space-default * $ratio );
+$space-larger: ( $space-large * $ratio );
+$space-largest: ( $space-larger * $ratio );
 
 // CSS Variables
 :root {
@@ -53,6 +57,7 @@ $default-margin: $margin 0 0;
   color: var( --color-foreground-primary );
 }
 
+// for Dark Mode
 @media ( prefers-color-scheme: dark ) {
   :root {
     --color-background-primary: #{$pallet-black-abyss};
@@ -65,7 +70,7 @@ $default-margin: $margin 0 0;
   }
 }
 
-@media ( min-width: 48em ) {
+@media ( min-width: 40em ) {
   :root {
     --base-font-size: #{$font-size-root-large};
   }

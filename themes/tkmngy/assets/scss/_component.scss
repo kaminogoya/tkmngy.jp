@@ -117,10 +117,6 @@
 }
 
 // Extend
-%default-margin {
-  margin: $default-margin;
-}
-
 %border-box {
   @include box-sizing( border-box );
 }

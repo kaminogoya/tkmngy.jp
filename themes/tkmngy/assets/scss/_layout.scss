@@ -6,11 +6,12 @@ body {
 header, 
 main,
 footer {
-  margin: 0 ( $margin / $ratio );
+  margin: 0 $space-small;
 
   @media ( min-width: 48em ) {
     max-width: ( $colspan07 + $gap );
     margin: 0 auto;
+    padding: 0 $space-default;
   }
 
   @media ( min-width: 72em ) {
@@ -22,23 +23,41 @@ footer {
 }
 
 header h1 {
-  margin: $margin 0 ( $margin * 2 );
+  margin: $space-large 0 $space-large;
 
   @media ( min-width: 48em ) {
-    margin: ( $margin * 2 ) 0;
+    margin: $space-large 0 $space-larger;
   }
 
   @media ( min-width: 72em ) {
-    margin-bottom: ( $margin * 3 );
+    margin-bottom: $space-larger;
   }
 }
 
 main > section {
   @media ( min-width: 48em ) {
-    margin-left: $gap;
+    margin-left: $space-small;
 
     h2 {
-      margin-left: -$gap;
+      margin-left: -$space-small;
+    }
+  }
+}
+
+main h2 {
+  margin-top: $space-larger;
+}
+
+main h3 {
+  margin-top: $space-large;
+
+  a {
+    display: block;
+    margin-top: $space-tiny;
+
+    @media ( min-width: 48em ) {
+      display: inline;
+      margin-top: 0;
     }
   }
 }
@@ -58,8 +77,8 @@ main > section {
 }
 
 footer {
-  margin-top: ( $margin * 5 );
-  margin-bottom: $margin;
+  margin-top: $space-largest;
+  margin-bottom: $space-large;
   text-align: center;
 
   @media ( min-width: 72em ) {
@@ -69,7 +88,7 @@ footer {
 
 article {
   > footer {
-    margin: ( $margin / 4 ) 0 0;
+    margin: $space-tiny 0 0;
     padding: 0;
     text-align: left;
     font-size: $small-font-size;

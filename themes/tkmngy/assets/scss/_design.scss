@@ -4,13 +4,13 @@ html {
   background-image: var( --image-logo );
   background-size: ( $colspan01 + $gap ) auto;
   background-repeat: no-repeat;
-  background-position: center bottom ( $margin * 3 );
+  background-position: center bottom $space-larger;
   font-family: $serif;
   
   @media ( min-width: 72em ) {
     padding-bottom: 0;
     background-size: $colspan02 auto;
-    background-position: right ( $margin * 2 ) bottom ( $margin * 2 );
+    background-position: right $space-larger bottom $space-larger;
   }
 }
 
@@ -86,13 +86,13 @@ hr {
 }
 
 li {
-  margin-bottom: ($margin / 3);
+  margin-bottom: $space-tiny;
   line-height: 1.5;
 }
 
 address {
   position: absolute;
-  bottom: $margin;
+  bottom: $space-default;
   left: 0;
   width: 100%;
 
