@@ -10,20 +10,22 @@ $pallet-gray-midnight: hsl(200, 16, 32);
 $pallet-black-abyss: hsl(200, 32, 16);
 $pallet-black-hadal: hsl(200, 16, 8);
 $pallet-blue: hsl(200, 56, 40);
-$pallet-lightblue: hsl(200, 56, 72);
+$pallet-lightblue: hsl(200, 56, 64);
 
 // Ratio
 $ratio: 1.73;
 
 // Font
-$sans-serif: "proxima-nova", "Helvetica Neue", Helvetica,  sans-serif;
-$serif: "ten-mincho-text", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
-$monospace: "source-code-pro", Consolas, Menlo, monospace !default;
+$font-primary: "toppan-bunkyu-mincho-pr6n", serif;
+$font-sans-serif: "游ゴシック", YuGothic, "proxima-nova", "Helvetica Neue", Helvetica,  sans-serif;
+$font-serif: "ten-mincho-text", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+$font-monospace: "source-code-pro", Consolas, Menlo, monospace;
 
 // Font Size
 $default-font-size: ( $base-primary * 1rem );
 $large-font-size: ( $base-secondary * 1rem );
-$largest-font-size: ( $default-font-size * $ratio );
+$larger-font-size: ( $default-font-size * $ratio );
+$largest-font-size: ( $larger-font-size * $ratio );
 $small-font-size: ( $large-font-size / $ratio );
 
 $font-size-root-default: ( $base-primary * 100% );

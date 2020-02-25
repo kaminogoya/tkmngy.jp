@@ -9,13 +9,13 @@ footer {
   margin: 0 $space-small;
 
   @media ( min-width: 48em ) {
-    max-width: ( $colspan07 + $gap );
+    max-width: ( $gap + $colspan07 + $gap );
     margin: 0 auto;
     padding: 0 $space-default;
   }
 
   @media ( min-width: 72em ) {
-    width: ($colspan07 + $gap);
+    width: ( $gap +$colspan07 + $gap );
     max-width: 100%;
     margin: 0;
     padding: 0 $colspan01;
@@ -64,15 +64,21 @@ main h3 {
 
 .posts {
   padding-left: 0;
-
+  
   time {
     display: block;
     color: var( --color-foreground-secondary );
     font-size: $small-font-size;
   }
   
-  > li {
+  li {
     list-style: none;
+    margin-top: $space-small;
+      
+    a {
+      font-family: $font-serif;
+      font-size: $large-font-size;
+    }
   }
 }
 
@@ -80,7 +86,7 @@ footer {
   margin-top: $space-largest;
   margin-bottom: $space-large;
   text-align: center;
-
+  
   @media ( min-width: 72em ) {
     text-align: left;
   }

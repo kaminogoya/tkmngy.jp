@@ -5,7 +5,7 @@ html {
   background-size: ( $colspan01 + $gap ) auto;
   background-repeat: no-repeat;
   background-position: center bottom $space-larger;
-  font-family: $serif;
+  font-family: $font-sans-serif;
   
   @media ( min-width: 72em ) {
     padding-bottom: 0;
@@ -29,7 +29,9 @@ h3,
 h4,
 h5,
 h6 {
-
+  font-family: $font-serif;
+  font-weight: normal;
+    
   a {
     color: var( --color-foreground-primary );
 
@@ -44,11 +46,19 @@ h6 {
   }
 }
 
+h2 {
+  font-size: $larger-font-size;
+}
+
+h3 {
+  font-size: $large-font-size;
+}
+
 header {
   h1 {
     position: relative;
-    font-family: toppan-bunkyu-mincho-pr6n, serif;
-    font-size: $font-size-root-largest;
+    font-family: $font-primary;
+    font-size: $large-font-size;
     letter-spacing: 0.16em;
     
     a {
@@ -58,7 +68,7 @@ header {
     &:after {
       position: absolute;
       right: 0;
-      bottom: 0;
+      bottom: 3px;
       display: block;
       content: "tkmngy.jp";
       letter-spacing: 0;
@@ -69,11 +79,15 @@ header {
 }
 
 article {
+  h1 {
+    font-size: $larger-font-size;
+  }        
+  
   footer {
     color: var( --color-foreground-secondary );
   }
 
-  > div {
+  & > div {
     text-align: justify;
   }
 }
@@ -86,7 +100,7 @@ hr {
 }
 
 li {
-  margin-bottom: $space-tiny;
+  margin-top: $space-tiny;
   line-height: 1.5;
 }
 
@@ -102,6 +116,7 @@ address {
 
   a {
     color: var( --color-foreground-primary );
+    font-family: $font-primary;
 
     &:visited {
         color: var( --color-foreground-primary );
