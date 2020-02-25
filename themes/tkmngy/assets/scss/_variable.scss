@@ -5,10 +5,10 @@ $base-secondary: 1.4;
 // Pallet
 $pallet-white: hsl(200, 40, 96);
 $pallet-gray-sunlight: hsl(200, 40, 84);
-$pallet-gray-twilight: hsl(200, 8, 64);
-$pallet-gray-midnight: hsl(200, 8, 24);
-$pallet-black-abyss: hsl(200, 24, 16);
-$pallet-black-hadal: hsl(200, 24, 8);
+$pallet-gray-twilight: hsl(200, 16, 48);
+$pallet-gray-midnight: hsl(200, 16, 32);
+$pallet-black-abyss: hsl(200, 32, 16);
+$pallet-black-hadal: hsl(200, 16, 8);
 $pallet-blue: hsl(200, 56, 40);
 $pallet-lightblue: hsl(200, 56, 72);
 
@@ -43,7 +43,7 @@ $space-largest: ( $space-larger * $ratio );
   --color-background-primary: #{$pallet-white};
   --color-background-secondary: #{$pallet-gray-sunlight};
   --color-foreground-primary: #{$pallet-black-hadal};
-  --color-foreground-secondary: #{$pallet-black-abyss};
+  --color-foreground-secondary: #{$pallet-gray-midnight};
   --color-spot-primary: #{$pallet-blue};
 
   --image-logo: url("/img/tkmngy.png");
