@@ -5,7 +5,7 @@ html {
   background-size: ( $colspan01 + $gap ) auto;
   background-repeat: no-repeat;
   background-position: center bottom $space-larger;
-  font-family: $font-sans-serif;
+  font-family: $font-serif;
   
   @media ( min-width: 72em ) {
     padding-bottom: 0;
@@ -29,9 +29,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-serif;
-  font-weight: normal;
-    
   a {
     color: var( --color-foreground-primary );
 
@@ -52,6 +49,7 @@ h2 {
 
 h3 {
   font-size: $large-font-size;
+  font-weight: normal;
 }
 
 header {
@@ -73,7 +71,7 @@ header {
       content: "tkmngy.jp";
       letter-spacing: 0;
       font-size: $small-font-size;
-      font-weight: 0;
+      font-weight: normal;
     }
   }
 }
