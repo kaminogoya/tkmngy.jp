@@ -76,6 +76,11 @@ header {
   }
 }
 
+.posts li a {
+  font-family: $font-serif;
+  font-size: $large-font-size;
+}
+
 article {
   h1 {
     font-size: $larger-font-size;

@@ -78,11 +78,6 @@ main h2 + section:first-of-type h3 {
   li {
     list-style: none;
     margin-top: $space-small;
-      
-    a {
-      font-family: $font-serif;
-      font-size: $large-font-size;
-    }
   }
 }
 
