@@ -24,7 +24,6 @@ h6 {
 a {
   color: rgb(0, 0, 238);
 }
-
 a:visited {
   color: rgb(85, 26, 139);
 }
@@ -100,8 +99,7 @@ img {
 }
 
 figure {
-  margin-top: 1.5rem;
-  margin-bottom: 0;
+  margin: 1.5rem 0 0;
 
   img {
     height: auto;
