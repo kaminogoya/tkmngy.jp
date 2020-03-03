@@ -22,15 +22,31 @@ footer {
   }
 }
 
-header h1 {
-  margin: $space-large 0 $space-large;
+header {
+  h1 {
+    margin: $space-large 0;
 
-  @media ( min-width: 48em ) {
-    margin: $space-large 0 $space-larger;
+    @media ( min-width: 48em ) {
+      margin-bottom: $space-larger;
+    }
   }
 
-  @media ( min-width: 72em ) {
-    margin-bottom: $space-larger;
+  nav {
+    ul {
+      display: flex;
+      margin: $space-small 0 $space-larger;  
+      padding-left: 0;
+    }
+    
+    li {
+      display: block;
+      margin-right: $space-small;
+      
+      mark {
+        background: transparent;
+        font-weight: bold;
+      }
+    }
   }
 }
 

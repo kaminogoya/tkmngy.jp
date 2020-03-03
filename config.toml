@@ -1,8 +1,23 @@
 baseURL = "https://tkmngy.jp/"
+relativeurls = true
 languageCode = "ja"
 hasCJKLanguage = true
+sectionPagesMenu = "main"
 title = "上ノ郷谷太一"
 theme = "tkmngy"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "概要"
+    url = "/about/"
+    weight = 100
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "ブログ"
+    url = "/posts/"
+    weight = 110
 
 [params]
   description = "デザイナー 上ノ郷谷太一 (かみのごうやたいち) のウェブサイト"

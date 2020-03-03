@@ -1,0 +1,8 @@
+{{ $.Scratch.Set "ogpType" "article" }}{{ if eq .Title "Posts" }}{{ $.Scratch.Set "ogpType" "website" }}{{ end }}{{ if .IsHome }}{{ $.Scratch.Set "ogpType" "website" }}{{ end }}
+    {{ with .Site.Params.Cover }}<meta content="{{ . }}" property="og:image">{{ end }}
+    <meta content="{{ .Title }}" property="og:title">
+    <meta content="{{ $.Scratch.Get "ogpType" }}" property="og:type">
+    <meta content="{{ .Description | default .Site.Params.Description }}" property="og:description">
+    <meta content="{{ .Permalink }}" property="og:url">
+    <meta content="summary" name="twitter:card">
+    {{ with .Site.Params.twitter }}<meta content="@{{ . }}" name="twitter:site">{{ end }}

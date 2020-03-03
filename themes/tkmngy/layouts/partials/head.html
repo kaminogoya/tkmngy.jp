@@ -1,6 +1,7 @@
-    <link href="{{ .Site.Params.CoverImage }}" rel="apple-touch-icon" itemprop="image">
+    {{ with .Site.Params.CoverImage }}<link href="{{ . }}" rel="apple-touch-icon" itemprop="image">{{ end }}
     <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" type="application/rss+xml" rel="alternate">
-    <link href="{{ .Permalink }}" rel="canonical" itemprop="url">
-    <link href="{{ .Site.Params.AuthorURL }}" rel="author">
+    <link href="{{ .Permalink }}" rel="canonical">
+    {{ with .Site.Params.AuthorURL }}<link href="{{ . }}" rel="author">{{ end }}
 {{ $style := resources.Get "scss/styles.scss" | toCSS | minify }}
     <link href="{{ $style.Permalink }}" rel="stylesheet">
+    <link href="{{ .Permalink }}" itemprop="url">

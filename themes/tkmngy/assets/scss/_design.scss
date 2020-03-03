@@ -74,6 +74,19 @@ header {
       font-weight: normal;
     }
   }
+
+  nav li {
+    font-size: $small-font-size;
+
+    a, a:visited, mark {
+      color: var( --color-foreground-primary );
+    }
+
+    a:hover {
+      color: var( --color-foreground-secondary );
+      text-decoration: none;
+    }
+  }
 }
 
 .posts li a {

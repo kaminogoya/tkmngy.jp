@@ -2,15 +2,10 @@
 {{ $isHomePage := eq .Title .Site.Title }}
     <title>{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
     <meta content="{{ .Description | default .Site.Params.Description }}" name="description">
-    <meta content="{{ .Description | default .Site.Params.Description }}" property="og:description">
-    {{ $.Scratch.Set "ogpType" "article" }}{{ if eq .Title "Posts" }}{{ $.Scratch.Set "ogpType" "website" }}{{ end }}{{ if .IsHome }}{{ $.Scratch.Set "ogpType" "website" }}{{ end }}
-    <meta content="{{ .Site.Params.Cover }}" property="og:image">
-    <meta content="{{ .Title }}" property="og:title" itemprop="name">
-    <meta content="{{ $.Scratch.Get "ogpType" }}" property="og:type">
-    <meta content="{{ .Permalink }}" property="og:url">
-    <meta content="summary" name="twitter:card">
-    <meta content="@{{ .Site.Params.twitter }}" name="twitter:site">
+    <meta content="{{ .Title }}" itemprop="name">
+    {{ with .Site.Params.Cover }}<meta content="{{ . }}" itemprop="image">{{ end }}
     <meta content="width=device-width" name="viewport">
+{{ partial "opengraph" . }}
 {{ if .Params.Date }}
     <meta content="{{ .Date.Format "2006-01-02T15:04:05+09:00" }}" property="article:published_time">
     {{ if ne (.Date.Format ( .Site.Params.dateformat | default "2006年1月2日")) (.Lastmod.Format ( .Site.Params.dateformat | default "2006年1月2日"))}}
