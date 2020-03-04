@@ -1,5 +1,4 @@
 baseURL = "https://tkmngy.jp/"
-relativeurls = true
 languageCode = "ja"
 hasCJKLanguage = true
 sectionPagesMenu = "main"

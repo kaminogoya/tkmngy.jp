@@ -1,7 +1,17 @@
-    {{ with .Site.Params.CoverImage }}<link href="{{ . }}" rel="apple-touch-icon" itemprop="image">{{ end }}
+{{ $isHomePage := eq .Title .Site.Title }}
+    <meta charset="utf-8">
+    <title>{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
+    <meta content="{{ .Description | default .Site.Params.Description }}" name="description">
+
     <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" type="application/rss+xml" rel="alternate">
-    <link href="{{ .Permalink }}" rel="canonical">
     {{ with .Site.Params.AuthorURL }}<link href="{{ . }}" rel="author">{{ end }}
+    <link href="{{ .Permalink }}" rel="canonical">
+    <meta content="width=device-width" name="viewport">    
 {{ $style := resources.Get "scss/styles.scss" | toCSS | minify }}
     <link href="{{ $style.Permalink }}" rel="stylesheet">
+
+    <meta content="{{ .Title }}" itemprop="name">
+    <meta content="{{ .Description | default .Site.Params.Description }}" itemprop="description">
     <link href="{{ .Permalink }}" itemprop="url">
+    {{ with .Site.Params.Coverimage }}<meta content="{{ . }}" itemprop="image">{{ end }}
+{{ partial "opengraph" . }}
