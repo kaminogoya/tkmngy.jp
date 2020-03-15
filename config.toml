@@ -14,7 +14,7 @@ theme = "tkmngy"
 
   [[menu.main]]
     identifier = "posts"
-    name = "随筆"
+    name = "読み物"
     url = "/posts/"
     weight = 110
 
