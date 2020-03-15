@@ -23,12 +23,8 @@ footer {
 }
 
 header {
-  h1 {
-    margin: $space-large 0;
-
-    @media ( min-width: 48em ) {
-      margin-bottom: $space-larger;
-    }
+  .title {
+    margin: $space-large 0 0;
   }
 
   nav {
@@ -82,7 +78,7 @@ main h2 + section:first-of-type h3 {
     margin-top: $space-default;
 }
 
-.posts {
+.entries {
   padding-left: 0;
   
   time {
@@ -97,6 +93,10 @@ main h2 + section:first-of-type h3 {
   }
 }
 
+.news time {
+  margin-top: $space-tiny;
+}
+
 footer {
   margin-top: $space-largest;
   margin-bottom: $space-large;
@@ -108,7 +108,7 @@ footer {
 }
 
 article {
-  > footer {
+  > header {
     margin: $space-tiny 0 0;
     padding: 0;
     text-align: left;

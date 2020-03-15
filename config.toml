@@ -2,7 +2,7 @@ baseURL = "https://tkmngy.jp/"
 languageCode = "ja"
 hasCJKLanguage = true
 sectionPagesMenu = "main"
-title = "上ノ郷谷太一"
+title = "tkmngy.jp"
 theme = "tkmngy"
 
 [menu]
@@ -14,7 +14,7 @@ theme = "tkmngy"
 
   [[menu.main]]
     identifier = "posts"
-    name = "ブログ"
+    name = "随筆"
     url = "/posts/"
     weight = 110
 

@@ -28,12 +28,15 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.title {
+  font-weight: bold;
+
   a {
     color: var( --color-foreground-primary );
 
     &:visited {
-        color: var( --color-foreground-primary );
+      color: var( --color-foreground-primary );
     }
 
     &:hover {
@@ -54,10 +57,14 @@ h3 {
 
 header {
   h1 {
+    font-size: $default-font-size;
+  }
+
+  .title {
     position: relative;
     font-family: $font-primary;
     font-size: $large-font-size;
-    letter-spacing: 0.16em;
+    letter-spacing: 1px;
     
     a {
         text-decoration: none;
@@ -68,10 +75,9 @@ header {
       right: 0;
       bottom: 3px;
       display: block;
-      content: "tkmngy.jp";
+      content: attr(title);
       letter-spacing: 0;
       font-size: $small-font-size;
-      font-weight: normal;
     }
   }
 
@@ -99,7 +105,7 @@ article {
     font-size: $larger-font-size;
   }        
   
-  footer {
+  time {
     color: var( --color-foreground-secondary );
   }
 

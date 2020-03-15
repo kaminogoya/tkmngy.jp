@@ -7,7 +7,7 @@
     {{ with .Site.Params.AuthorURL }}<link href="{{ . }}" rel="author">{{ end }}
     <link href="{{ .Permalink }}" rel="canonical">
     <meta content="width=device-width" name="viewport">    
-{{ $style := resources.Get "scss/styles.scss" | toCSS | minify }}
+{{ $style := resources.Get "scss/styles.scss" | toCSS | minify | fingerprint }}
     <link href="{{ $style.Permalink }}" rel="stylesheet">
 
     <meta content="{{ .Title }}" itemprop="name">

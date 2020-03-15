@@ -5,15 +5,16 @@
   </head>
   <body>
     <header>
-      <h1><a href="{{ .Site.BaseURL  }}">{{ .Site.Title  }}</a></h1>
+      <div class="title" title="上ノ郷谷太一"><a href="{{ .Site.BaseURL  }}">{{ .Site.Title  }}</a></div>
       {{ partial "navigation" . }}
+      <h1 title="上ノ郷谷太一">{{ .Title }}</h1>
       {{ .Content }}
     </header>
     <main>
       {{ range .Pages.GroupByPublishDate "2006" }}
       <section>
         <h2>{{ .Key }}年</h2>
-        <ol class="posts">
+        <ol class="entries posts">
           {{ range .Pages }}
           <li>
             <a href="{{ .Permalink }}">{{ .Title }}</a>
