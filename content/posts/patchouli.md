@@ -11,9 +11,13 @@ title = "パチュリ"
 パチュリといえば、高校生のときに買った、藤原ヒロシさんの [Hiroshi Fujiwara In Dub Conference](https://www.amazon.co.jp/exec/obidos/ASIN/B0000563SJ/2xup-22) を思い出す。アナログ盤のような紙ジャケの CD で、ディスクを保護していたスリーブから (だったと思う) 香りがする仕様だった。しばらく忘れていたのだけど、なにかのきっかけでパチュリの香りを感じたときに思いだした。
 
 <figure>
-  <a href="https://www.amazon.co.jp/exec/obidos/ASIN/B0000563SJ/2xup-22">
-    <img alt="HIROSHI FUJIWARA IN DUB CONFERENCE" src="https://images-fe.ssl-images-amazon.com/images/P/B0000563SJ.jpg">
-  </a>
+<a href="https://www.amazon.co.jp/exec/obidos/ASIN/B0000563SJ/2xup-22">
+<img alt="HIROSHI FUJIWARA IN DUB CONFERENCE" src="https://images-fe.ssl-images-amazon.com/images/P/B0000563SJ.jpg">
+</a>
 </figure>
 
-昔は結構苦手だったような気もするので、年齢を重ねると、苦いものが気にならなくなるのと同じだったりするのかもしれない。日に日に指先がすべるようになってきて、紙をうまくつかめなかったり、ビニール袋の口を開けなくなってきているので、各所のケアを丁寧にやっていこう。そのうち、嫌だなーと感じていた、雑誌のページをめくるときに、指先をペロってやるやつをやってしまいそう。
+昔は結構苦手だったような気もするので、年齢を重ねると、苦いものが気にならなくなるのと同じだったりするのかもしれない。
+
+***
+
+全体の乾燥のほかに、日に日に指先がすべるようになってきていて、紙をうまくつかめなかったり、ビニール袋の口を開けなくなってきている。そのうち、嫌だなーと感じていた、指先をペロってやるやつをやってしまいそうなので、そうならないように各所のケアを丁寧にやっていこう。
