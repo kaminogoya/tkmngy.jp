@@ -2,25 +2,34 @@ baseURL = "https://tkmngy.jp/"
 languageCode = "ja"
 hasCJKLanguage = true
 sectionPagesMenu = "main"
-title = "上ノ郷谷太一"
+title = "Taichi Kaminogoya"
 theme = "tkmngy"
 
 [menu]
   [[menu.main]]
-    identifier = "about"
-    name = "概要"
-    url = "/about/"
+    identifier = "home"
+    name = "Home"
+    url = "/"
     weight = 100
-
   [[menu.main]]
     identifier = "posts"
-    name = "読み物"
+    name = "Posts"
     url = "/posts/"
     weight = 110
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 120
 
 [params]
-  description = "デザイナー 上ノ郷谷太一 (かみのごうやたいち) のウェブサイト"
-  twitter = "tchkmngy"
   author = "上ノ郷谷 太一"
+  description = "デザイナー、上ノ郷谷太一のパーソナルウェブサイトです。プロフィールや経歴、体験したことの感想などを書いたブログ記事などを公開しています。"
+  twitter = "tchkmngy"
   authorurl = "https://tkmngy.jp/"
   coverimage = "https://tkmngy.jp/apple-touch-icon-precomposed.png"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

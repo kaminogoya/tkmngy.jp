@@ -9,13 +9,13 @@ footer {
   margin: 0 $space-small;
 
   @media ( min-width: 48em ) {
-    max-width: ( $gap + $colspan07 + $gap );
+    max-width: ( $gap + $colspan08 + $gap );
     margin: 0 auto;
     padding: 0 $space-default;
   }
 
   @media ( min-width: 72em ) {
-    width: ( $gap +$colspan07 + $gap );
+    width: ( $gap +$colspan08 + $gap );
     max-width: 100%;
     margin: 0;
     padding: 0 $colspan01;
@@ -40,7 +40,7 @@ header {
       
       mark {
         background: transparent;
-        font-weight: bold;
+//        font-weight: bold;
       }
     }
   }
@@ -48,10 +48,10 @@ header {
 
 main > section {
   @media ( min-width: 48em ) {
-    margin-left: $space-small;
+//    margin-left: $space-small;
 
     h2 {
-      margin-left: -$space-small;
+//      margin-left: -$space-small;
     }
   }
 }
@@ -66,16 +66,23 @@ main h3 {
   a {
     display: block;
     margin-top: $space-tiny;
+    margin-bottom: $space-tiny;
 
     @media ( min-width: 48em ) {
       display: inline;
       margin-top: 0;
+      margin-right: $space-tiny;
     }
+  }
+
+  time {
+    color: var( --color-foreground-secondary );
+    font-weight: normal;  
   }
 }
 
 main h2 + section:first-of-type h3 {
-    margin-top: $space-default;
+  margin-top: $space-default;
 }
 
 .entries {

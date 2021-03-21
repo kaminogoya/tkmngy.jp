@@ -11,17 +11,10 @@
     <main>
       <h1>{{ .Title }}</h1>
       {{ .Content }}
-      {{ range .Pages.GroupByPublishDate "2006" }}
+      {{ range .Pages }}
       <section>
-        <h2>{{ .Key }}年</h2>
-        <ol class="entries posts">
-          {{ range .Pages }}
-          <li>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-            <time datetime="{{ .Date.Format "2006-01-02T15:04:05+09:00"}}">{{ .Date.Format "1月2日" }}</time>
-          </li>
-          {{ end }}
-        </ol>
+        <h2>{{ .Title }}</h2>
+        {{ .Content }}
       </section>
       {{ end }}
     </main>

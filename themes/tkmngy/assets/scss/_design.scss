@@ -1,17 +1,8 @@
 html {
   position: relative;
   padding-bottom: $colspan02;
-  background-image: var( --image-logo );
-  background-size: ( $colspan01 + $gap ) auto;
-  background-repeat: no-repeat;
-  background-position: center bottom $space-larger;
-  font-family: $font-serif;
-  
-  @media ( min-width: 72em ) {
-    padding-bottom: 0;
-    background-size: $colspan02 auto;
-    background-position: right $space-larger bottom $space-larger;
-  }
+  background-attachment: fixed;
+  font-family: $font-sans-serif-system;
 }
 
 a {
@@ -31,8 +22,8 @@ h5,
 h6,
 .title {
   line-height: 1.25;
-  font-weight: bold;
-
+  font-weight: 600;
+  
   a {
     color: var( --color-foreground-primary );
 
@@ -47,25 +38,26 @@ h6,
   }
 }
 
+h1 {
+  font-size: $largest-font-size;
+}
+
 h2 {
   font-size: $larger-font-size;
 }
 
 h3 {
   font-size: $large-font-size;
-  font-weight: normal;
 }
 
 header {
-  h1 {
-    font-size: $default-font-size;
-  }
+//  h1 {
+//    font-size: $default-font-size;
+//  }
 
   .title {
     position: relative;
-    font-family: $font-primary;
     font-size: $large-font-size;
-    letter-spacing: 0.16em;
     
     a {
         text-decoration: none;
@@ -86,24 +78,39 @@ header {
     font-size: $small-font-size;
 
     a, a:visited, mark {
-      color: var( --color-foreground-primary );
+//        color: var( --color-foreground-primary );
+//        color: rgb(192, 128, 0);
+        color: #C19FC7;
+        font-weight: bold;
+        text-decoration: none;
+        padding-bottom: 2px;
     }
 
     a:hover {
       color: var( --color-foreground-secondary );
-      text-decoration: none;
+//      text-decoration: underline;
+    }
+
+    mark {
+        border-bottom: 0.2rem solid;
     }
   }
 }
 
 .posts li a {
-  font-family: $font-serif;
+  // font-weight: bold;
   font-size: $large-font-size;
+}
+
+main {
+  h1 {
+//    font-size: $default-font-size;      
+  }
 }
 
 article {
   h1 {
-    font-size: $larger-font-size;
+//    font-size: $larger-font-size;
   }        
   
   time {
@@ -119,12 +126,13 @@ hr {
   margin-right: auto;
   margin-left: auto;
   border: 0;
-  @include eq-triangle( 1em, $pallet-gray-twilight, bottom );
+//  @include eq-triangle( 1em, rgb(192, 128, 0), bottom );
+  @include eq-triangle( 1em, rgb(192, 128, 0), bottom );
 }
 
 li {
   margin-top: $space-tiny;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 address {
@@ -132,14 +140,20 @@ address {
   bottom: $space-default;
   left: 0;
   width: 100%;
-
+  padding-top: ( $colspan01 + $gap + $gap );
+  background-image: var( --image-logo );
+  background-size: ( $colspan01 ) auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  
   @media ( min-width: 72em ) {
     position: static;
+    padding-top: ( $colspan01 + $gap );
+    background-position: left top;
   }
 
   a {
     color: var( --color-foreground-primary );
-    font-family: $font-primary;
 
     &:visited {
         color: var( --color-foreground-primary );
