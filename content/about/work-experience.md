@@ -6,6 +6,14 @@ weight = 10
 +++
 <section>
 <h3>
+株式会社 上ノ郷谷デザイン事務所
+<time datetime="2021-10-04">2021年10月</time>
+</h3>
+<ul>
+<li>代表取締役</li>
+</ul>
+</section>
+<h3>
 <a href="https://da-vinci-studio.com">株式会社 Da Vinci Studio</a>
 <time datetime="2020-04-01">2020年4月</time>
 </h3>
@@ -16,7 +24,7 @@ weight = 10
 <section>
 <h3>
 <a href="https://tkmngy.jp/">個人事業活動</a>
-<time datetime="2020-04-01">2019年3月</time>
+<time datetime="2020-04-01">2019年3月</time>〜<time datetime="2021-09-30">2021年9月</time>
 </h3>
 <ul>
 <li>デザイナー</li>
