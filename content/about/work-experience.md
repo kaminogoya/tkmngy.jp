@@ -6,7 +6,7 @@ weight = 10
 +++
 <section>
 <h3>
-株式会社 上ノ郷谷デザイン事務所
+<a href="https://kmngy.jp">株式会社 上ノ郷谷デザイン事務所</a>
 <time datetime="2021-10-04">2021年10月</time>
 </h3>
 <ul>
