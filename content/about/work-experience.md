@@ -6,8 +6,17 @@ weight = 10
 +++
 <section>
 <h3>
+<a href="https://nstock.co.jp/">Nstock 株式会社</a>
+<time datetime="2024-12-01">2024 年 12 月</time>
+</h3>
+<ul>
+<li>デザイナー</li>
+</ul>
+</section>
+<section>
+<h3>
 <a href="https://kufu.ai/">株式会社 くふう AI スタジオ</a>
-<time datetime="2023-07-01">2023 年 7 月</time>
+<time datetime="2023-07-01">2023 年 7 月</time>〜<time datetime="2024-10-31">2024 年 10 月</time>
 </h3>
 <ul>
 <li>執行役員 <dfn><abbr title="Chief Design Officer">CDO</abbr></dfn> (最高デザイン責任者)</li>
